@@ -13,10 +13,10 @@
   />
   <style>
     :root {
-      --primary-color: #fc71a1;    /* Pinkish color */
-      --secondary-color: #ffda79;  /* Light yellow color */
-      --dark-color: #2c2c54;       /* Dark purple/blue */
-      --light-color: #ffffff;      /* White */
+      --primary-color: #f3c64b; /* Golden yellow */
+      --secondary-color: #e5a828; /* Deeper golden yellow */
+      --dark-color: #573e23;     /* Brown tone */
+      --light-color: #ffffff;    /* White */
       --font-heading: 'Baloo 2', cursive;
       --font-body: 'Open Sans', sans-serif;
     }
@@ -29,13 +29,13 @@
     }
     body {
       font-family: var(--font-body);
-      background: #f9f9f9;
+      background: var(--light-color); /* White background */
       color: var(--dark-color);
       line-height: 1.6;
     }
     a {
       text-decoration: none;
-      color: var(--dark-color);
+      color: var(--primary-color);
     }
     ul {
       list-style: none;
@@ -70,7 +70,7 @@
       transition: color 0.3s;
     }
     nav ul li:hover {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
 
     /* HERO SECTION */
@@ -81,7 +81,7 @@
       justify-content: center;
       text-align: center;
       padding: 4rem 2rem;
-      background: linear-gradient(135deg, #fce3ec 0%, #ffe8b3 100%);
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     }
     .hero h1 {
       font-size: 3rem;
@@ -92,10 +92,10 @@
     .hero p {
       max-width: 600px;
       margin-bottom: 2rem;
-      color: #555;
+      color: var(--dark-color);
     }
-    .hero img {
-      max-width: 280px;
+    .hero video {
+      max-width: 274px;
       margin-bottom: 2rem;
       border-radius: 10px;
     }
@@ -110,15 +110,15 @@
       transition: background 0.3s;
     }
     .cta-button:hover {
-      background: #ff5692; /* Darker pink */
+      background: var(--secondary-color);
     }
     .cta-button a {
-      color: #ffffff;
+      color: var(--light-color);
     }
 
     /* HOW TO BUY */
     .how-to-buy {
-      background: #fff;
+      background: var(--light-color);
       padding: 3rem 2rem;
     }
     .how-to-buy h2 {
@@ -142,6 +142,7 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      border: 1px solid var(--primary-color);
     }
     .step .number {
       background: var(--primary-color);
@@ -158,7 +159,7 @@
 
     /* ROADMAP */
     .roadmap {
-      background: #f7f7f7;
+      background: var(--light-color);
       padding: 3rem 2rem;
       text-align: center;
     }
@@ -176,10 +177,11 @@
       margin: 0 auto;
     }
     .roadmap-phase {
-      background: #fff;
+      background: var(--light-color);
       border-radius: 10px;
       padding: 2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      border: 1px solid var(--primary-color);
     }
     .roadmap-phase h3 {
       margin-bottom: 1rem;
@@ -187,7 +189,7 @@
     }
     .roadmap-phase ul li {
       margin-bottom: 0.5rem;
-      color: #555;
+      color: var(--dark-color);
     }
 
     /* FOOTER */
@@ -203,16 +205,16 @@
       margin-bottom: 1rem;
     }
     footer .social-links a {
-      color: var(--dark-color);
+      color: var(--primary-color);
       font-size: 1.2rem;
       transition: color 0.3s;
     }
     footer .social-links a:hover {
-      color: var(--primary-color);
+      color: var(--secondary-color);
     }
     footer p {
       font-size: 0.9rem;
-      color: #777;
+      color: var(--dark-color);
     }
 
     /* MEDIA QUERIES */
@@ -230,7 +232,6 @@
     <div class="logo">Pissing Cat Farts</div>
     <nav>
       <ul>
-        <!-- Removed 'Tokenomics' link -->
         <li><a href="#how-to-buy">How to Buy</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="https://dexscreener.com/solana/5343mkekdxvzo1rxoc9g3caf4ds5mfwgnemw9q8wyvae" target="_blank">Chart</a></li>
@@ -240,21 +241,19 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <!-- Replace PCF.jpg with the correct path if needed -->
     <video 
-    src="PCF.MP4" 
-    autoplay 
-    loop 
-    muted 
-    playsinline 
-    style="width: 274px; height: auto; margin-bottom: 2rem; border-radius: 10px;">
-  </video>
+      src="PCF.MP4" 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      style="width: 274px; height: auto; margin-bottom: 2rem; border-radius: 10px;">
+    </video>
     <h1>The Most Purrfect Meme Coin!</h1>
     <p>
       Introducing Pissing Cat Farts (PCF): a meme coin built for fun, community, and ridiculous vibes. 
       Because why not?
     </p>
-    <!-- Updated Buy Now link -->
     <button class="cta-button">
       <a href="https://pump.fun/coin/2VKGAf3DztsokLJPFYHHvH5uaoW3d9ExPN5BHHHLpump" target="_blank">
         Buy $PCF
@@ -266,7 +265,6 @@
   <section class="how-to-buy" id="how-to-buy">
     <h2>How to Buy PCF</h2>
     <div class="buy-steps">
-      <!-- STEP #1 -->
       <div class="step">
         <div class="number">1</div>
         <div>
@@ -277,10 +275,6 @@
           </p>
         </div>
       </div>
-      
-      <!-- REMOVED THE ORIGINAL STEP #2 -->
-
-      <!-- STEP #2 (formerly STEP #3) -->
       <div class="step">
         <div class="number">2</div>
         <div>
@@ -331,9 +325,7 @@
   <!-- FOOTER -->
   <footer>
     <div class="social-links">
-      <!-- Twitter -->
       <a href="https://x.com/pissingcatfarts" target="_blank">Twitter</a>
-      <!-- Telegram -->
       <a href="https://t.me/pdctele" target="_blank">Telegram</a>
     </div>
     <p>
@@ -343,5 +335,7 @@
 
 </body>
 </html>
+
+
 
 
